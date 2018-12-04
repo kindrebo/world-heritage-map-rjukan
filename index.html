@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+  <html lang="no">
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Verdensarven - Arkitektur, bygningstyper og byplanlegging i Rjukan</title>
+      <!-- Leaflet -->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+      <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""><!-- Leaflet JS loaded after Leaflet CSS -->
+      </script>
+      <!-- Main CSS file -->
+      <link rel = "stylesheet" href = "assets/css/main.css">
+    </head>
+
+    <body>
+      <main id="map">
+      </main>
+      <header id="topbar">
+      </header>
+
+      <!-- Load scripts -->
+      <script>
+      // Initialize and center the map
+      var map = L.map('map').setView([59.878902, 8.596115632658332], 17);
+      //Add the baselayer
+      L.tileLayer('http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart&zoom={z}&x={x}&y={y}', {
+                attribution: '<a href="http://www.kartverket.no/">Kartverket</a>'
+            }).addTo(map);
+      </script>
+
+    </body>
+ </html>
